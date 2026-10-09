@@ -9,11 +9,12 @@ worth to build this.
 * Building
 
 - Clone this repo and cd into the project directory
-  #+begin_src bash
+
+#+begin_src bash
 git clone https://github.com/Niakr1s/llama.cpp
 cd llama.cpp
 git checkout cmpfix
-  #+end_src
+#+end_src
 
 - Build and enjoy
 
@@ -26,20 +27,20 @@ cmpfix/build.sh
 ** Initialization
 
 Clone this repo and add upstream
-  #+begin_src bash
+#+begin_src bash
 git clone https://github.com/Niakr1s/llama.cpp
 cd llama.cpp
 git remote add upstream https://github.com/ggml-org/llama.cpp
-  #+end_src
+#+end_src
 
 ** Sync upstream
 
-  #+begin_src bash
+#+begin_src bash
 git fetch upstream
 git checkout master
 git merge --ff-only upstream/main
 git push origin main
-  #+end_src
+#+end_src
 
 ** Refresh the cmpfix branch
 
