@@ -49,5 +49,5 @@ git checkout cmpfix
 git tag -l "v*" --sort=creatordate
 git rebase <tag> # select the latest tag
 
-git push --foce-with-lease origin cmpfix
+git push --force-with-lease origin cmpfix
 #+end_src
