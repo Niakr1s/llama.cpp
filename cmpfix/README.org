@@ -6,6 +6,10 @@ This repo contains patch and build script made for increasing the speed of
 inference for nvidia mining cards (like CMP50HX). The speedup is up to x2, so it
 worth to build this.
 
+* The idea
+
+This fix got from [[https://github.com/ggml-org/llama.cpp/issues/24616#issue-4659810306][this]] issue on [[https://github.com/ggml-org/llama.cpp][original]] repo.
+
 * Building
 
 - Clone this repo and cd into the project directory
