@@ -8,7 +8,7 @@ worth to build this.
 
 * The idea
 
-This fix got from [[https://github.com/ggml-org/llama.cpp/issues/24616#issue-4659810306][this]] issue on [[https://github.com/ggml-org/llama.cpp][original]] repo.
+This fix got from [[https://github.com/ggml-org/llama.cpp/issues/24616#issue-4659810306][this]] issue on [[https://github.com/ggml-org/llama.cpp][original]] repo. The [[https://github.com/ggml-org/llama.cpp/pull/25834/changes][PR]] exists, but doesn't merged at the current date.
 
 * Building
 
