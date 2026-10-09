@@ -17,6 +17,8 @@
 
 </div>
 
+## Fork [README](cmpfix/README.org)
+
 ## Quick start
 
 A few options to get `llama.cpp` installed on your machine:
