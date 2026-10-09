@@ -1,0 +1,53 @@
+#+title: Readme
+
+* Description
+
+This repo contains patch and build script made for increasing the speed of
+inference for nvidia mining cards (like CMP50HX). The speedup is up to x2, so it
+worth to build this.
+
+* Building
+
+- Clone this repo and cd into the project directory
+  #+begin_src bash
+git clone https://github.com/Niakr1s/llama.cpp
+cd llama.cpp
+git checkout cmpfix
+  #+end_src
+
+- Build and enjoy
+  #+begin_src bash
+cmake -B build -DGGML_CUDA=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=native -DCMAKE_CUDA_FLAGS="-DDISABLE_DP4A --fmad=false"
+cmake --build build -j"$(nproc)"
+  #+end_src
+
+* Mantaining this fork
+
+** Initialization
+
+Clone this repo and add upstream
+  #+begin_src bash
+git clone https://github.com/Niakr1s/llama.cpp
+cd llama.cpp
+git remote add upstream https://github.com/ggml-org/llama.cpp
+  #+end_src
+
+** Sync upstream
+
+  #+begin_src bash
+git fetch upstream
+git checkout master
+git merge --ff-only upstream/main
+git push origin main
+  #+end_src
+
+** Refresh the cmpfix branch
+
+#+begin_src bash
+git checkout cmpfix
+
+git tag -l "v*" --sort=creatordate
+git rebase <tag> # select the latest tag
+
+git push --foce-with-lease origin cmpfix
+#+end_src
