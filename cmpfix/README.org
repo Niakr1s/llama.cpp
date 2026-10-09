@@ -51,3 +51,10 @@ git rebase <tag> # select the latest tag
 
 git push --force-with-lease origin cmpfix
 #+end_src
+
+** Troubleshooting
+
+*** Undo rebase
+#+begin_src bash
+git reset --hard ORIG_HEAD
+#+end_src
